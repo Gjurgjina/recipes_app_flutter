@@ -10,8 +10,7 @@ import 'package:http/http.dart' as http;
 class MealApiService {
   static const String baseUrl = 'https://www.themealdb.com/api/json/v1/1';
 
-  //funkcijata vrakja Future zatoa sto pravime request na internet
-  //vrakja lista na kategorii
+  
   Future<List<Category>> fetchCategories() async {
     final uri = Uri.parse('$baseUrl/categories.php');
     final response = await http.get(uri);
@@ -28,7 +27,7 @@ class MealApiService {
     }
   }
 
-  //vrakja lista na jadenja od kategorija
+  
   Future<List<Meal>> fetchMealsByCategory(String category) async {
     final uri = Uri.parse('$baseUrl/filter.php?c=$category');
     final response = await http.get(uri);
@@ -44,8 +43,7 @@ class MealApiService {
     }
   }
 
-  //prebaruva, no i filtrira po kategorija
-  //query e tekstot sto korisnikot go pisuva vo search TextField
+  
   Future<List<Meal>> searchMealsInCategory(String category, String query) async {
     final uri = Uri.parse('$baseUrl/search.php?s=$query');
     final response = await http.get(uri);
