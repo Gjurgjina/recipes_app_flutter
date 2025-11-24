@@ -12,8 +12,7 @@ class Category {
     required this.description,
   });
 
-  //factory e specijalen konstruktor, za da se kreira objekt od json
-  //fromJson -> cita JSON od API i go pretvora vo Category object
+  
   factory Category.fromJson(Map<String, dynamic> json) {
     return Category(
         id: json["idCategory"],
