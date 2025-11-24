@@ -3,8 +3,7 @@ import 'package:meals_app/models/category.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;
-  final VoidCallback onTap;//funkcija bez argumenti koja ne vrakja nisto, vo slucajov e
-  //samo za klikanje onTap nie ja kontrolirame
+  final VoidCallback onTap;
 
   const CategoryCard({super.key, required this.category, required this.onTap});
 
